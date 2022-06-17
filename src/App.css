@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #3c484e;
+  font-family: "Open Sans", sans-serif;
+  overflow-y: overlay;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Main {
+  padding: 10px 20px;
+  grid-template-columns: minmax(auto, 768px);
+  display: grid;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+i {
+    font-size: 16px;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+h1, h3, h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.Form  {
+    padding: 20px 0;
+}
+
+.Form input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.Form label { 
+    font-size: 12px;
+    float: left;
+}
+
+#market_cap {
+    float: right;
+}
+
+article {
+  text-decoration: none;
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
+    1px 3px 8px rgba(39, 44, 49, 0.03);
+  border-radius: 5px;
+  margin: 0 0 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  animation-duration: 2s;
+  animation-name: fade;
+  width: 140px;
 }
 
-.App-link {
-  color: #61dafb;
+article img {  
+  height: 100px;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 15px;
 }
 
-@keyframes App-logo-spin {
+
+@keyframes fade {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
